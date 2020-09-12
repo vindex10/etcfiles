@@ -1,0 +1,3 @@
+# required by media-sound/pulseaudio-modules-bt-9999::gentoo
+# required by pulseaudio-modules-bt (argument)
+>=media-sound/pulseaudio-12.2-r1 -bluetooth

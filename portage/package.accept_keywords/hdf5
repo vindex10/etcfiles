@@ -1,0 +1,2 @@
+# required for unsupported combination of cxx + fortran + threads
+sci-libs/hdf5 ~amd64

@@ -1,0 +1,6 @@
+app-text/zathura magic synctex
+# required by app-text/zathura-pdf-poppler-0.2.9::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-text/poppler-0.74.0 cairo
+

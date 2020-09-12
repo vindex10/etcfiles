@@ -1,0 +1,4 @@
+# required by dev-python/qtconsole-4.3.1::gentoo
+# required by dev-python/jupyter-1.0.0-r2::gentoo
+# required by dev-python/jupyter (argument)
+>=dev-python/PyQt5-5.10.1-r1 svg gui widgets

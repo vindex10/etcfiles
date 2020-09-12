@@ -1,0 +1,5 @@
+# required by app-text/qpdfview-0.4.16::gentoo[pdf]
+# required by qpdfview (argument)
+>=app-text/poppler-0.74.0 qt5
+
+app-text/qpdfview synctex

@@ -1,0 +1,6 @@
+# required by media-video/vlc-3.0.6-r1::gentoo
+# required by vlc (argument)
+>=sys-libs/zlib-1.2.11-r2 minizip
+
+media-video/vlc libass matroska ogg
+

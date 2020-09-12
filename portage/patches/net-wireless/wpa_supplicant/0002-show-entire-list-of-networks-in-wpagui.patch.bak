@@ -1,0 +1,38 @@
+index a0aa05ed3..b6bd3e1da 100644
+--- a/wpa_gui-qt4/wpagui.cpp
++++ b/wpa_gui-qt4/wpagui.cpp
+@@ -12,6 +12,8 @@
+ 
+ #include <cstdio>
+ #include <unistd.h>
++#include <chrono>
++#include <thread>
+ #include <QMessageBox>
+ #include <QCloseEvent>
+ #include <QImageReader>
+@@ -715,7 +717,22 @@ void WpaGui::updateNetworks()
+ 
+ 		if (last)
+ 			break;
++
+ 		start = end + 1;
++		if (*start)
++			continue;
++
++		std::this_thread::sleep_for(std::chrono::milliseconds(500));  // avoid race conditions
++		QString cmd("LIST_NETWORKS LAST_ID=");
++		cmd.append(id);
++		if (ctrlRequest(cmd.toLocal8Bit().constData(), buf, &len) < 0)
++			break;
++
++		buf[len] = '\0';
++		start = strchr(buf, '\n');
++		if (start == NULL)
++			break;
++		start++;
+ 	}
+ 
+ 	if (networkSelect->count() > 1)
+-- 
+2.21.0
+

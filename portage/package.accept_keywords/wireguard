@@ -1,0 +1,4 @@
+# always unstable
+virtual/wireguard ~amd64
+net-vpn/wireguard-modules ~amd64
+net-vpn/wireguard-tools ~amd64

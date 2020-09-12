@@ -1,0 +1,129 @@
+diff --git a/calf-gui.xml b/calf-gui.xml
+index dc8441a1..c539144b 100644
+--- a/calf-gui.xml
++++ b/calf-gui.xml
+@@ -230,6 +230,31 @@
+               </packing>
+             </child>
+             
++            <child>
++              <object class="GtkLabel" id="prefs_label_win_start_hidden">
++                <property name="visible">True</property>
++                <property name="xalign">1.0</property>
++                <property name="label" translatable="yes">Start hidden to tray</property>
++              </object>
++              <packing>
++                <property name="top_attach">5</property>
++                <property name="bottom_attach">6</property>
++              </packing>
++            </child>
++            <child>
++              <object class="GtkCheckButton" id="win-start-hidden">
++                <property name="visible">True</property>
++                <property name="can_focus">True</property>
++                <property name="receives_default">False</property>
++                <property name="draw_indicator">True</property>
++              </object>
++              <packing>
++                <property name="left_attach">1</property>
++                <property name="right_attach">2</property>
++                <property name="top_attach">5</property>
++                <property name="bottom_attach">6</property>
++              </packing>
++            </child>
+           </object>
+           <packing>
+             <property name="position">1</property>
+diff --git a/src/calf/gui_config.h b/src/calf/gui_config.h
+index 33c021a2..16818cd1 100644
+--- a/src/calf/gui_config.h
++++ b/src/calf/gui_config.h
+@@ -81,6 +81,7 @@ struct gui_config
+     int rack_float, float_size;
+     bool rack_ears;
+     bool vu_meters;
++    bool win_start_hidden;
+     std::string style;
+     
+     gui_config();
+diff --git a/src/gtk_main_win.cpp b/src/gtk_main_win.cpp
+index 2348f5c2..dfa452b2 100644
+--- a/src/gtk_main_win.cpp
++++ b/src/gtk_main_win.cpp
+@@ -23,6 +23,8 @@
+ using namespace calf_plugins;
+ using namespace std;
+ 
++static gint window_hide (gtk_main_window *main);
++
+ gtk_main_window::gtk_main_window()
+ {
+     toplevel = NULL;
+@@ -120,6 +122,7 @@ void gtk_main_window::on_preferences_action(GtkWidget *widget, gtk_main_window *
+     
+     GtkWidget *preferences_dlg = GTK_WIDGET(gtk_builder_get_object(prefs_builder, "preferences"));
+     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(prefs_builder, "show-rack-ears")), main->get_config()->rack_ears);
++    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(prefs_builder, "win-start-hidden")), main->get_config()->win_start_hidden);
+     gtk_spin_button_set_range(GTK_SPIN_BUTTON(gtk_builder_get_object(prefs_builder, "rack-float")), 0, 1);
+     gtk_spin_button_set_range(GTK_SPIN_BUTTON(gtk_builder_get_object(prefs_builder, "float-size")), 1, 32);
+     gtk_spin_button_set_increments(GTK_SPIN_BUTTON(gtk_builder_get_object(prefs_builder, "rack-float")), 1, 1);
+@@ -135,6 +138,7 @@ void gtk_main_window::on_preferences_action(GtkWidget *widget, gtk_main_window *
+         gtk_combo_box_get_active_iter(cb, &iter);
+         gtk_tree_model_get_value(GTK_TREE_MODEL(styles), &iter, 1, &path_);
+         main->get_config()->rack_ears = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(prefs_builder, "show-rack-ears")));
++        main->get_config()->win_start_hidden = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(prefs_builder, "win-start-hidden")));
+         main->get_config()->rack_float = gtk_spin_button_get_value(GTK_SPIN_BUTTON(gtk_builder_get_object(prefs_builder, "rack-float")));
+         main->get_config()->float_size = gtk_spin_button_get_value(GTK_SPIN_BUTTON(gtk_builder_get_object(prefs_builder, "float-size")));
+         main->get_config()->vu_meters = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(prefs_builder, "show-vu-meters")));
+@@ -827,6 +831,9 @@ void gtk_main_window::create()
+     g_signal_connect(GTK_OBJECT(toplevel), "destroy", G_CALLBACK(window_destroy_cb), this);
+     
+     create_status_icon();
++
++    if (get_config()->win_start_hidden)
++        g_idle_add((GSourceFunc)window_hide, this);
+ }
+ 
+ window_state describe_window (GtkWindow *win)
+@@ -843,6 +850,13 @@ window_state describe_window (GtkWindow *win)
+     return state;
+ }
+ 
++static gint window_hide (gtk_main_window *main)
++{
++    main->winstate = describe_window(main->toplevel);
++    gtk_widget_hide(GTK_WIDGET(main->toplevel));
++    return FALSE;
++}
++
+ void position_window (GtkWidget *win, window_state state)
+ {
+     gdk_window_move_resize(win->window, state.x, state.y, state.width, state.height);
+diff --git a/src/gui_config.cpp b/src/gui_config.cpp
+index 2c6c8342..44e3d3c1 100644
+--- a/src/gui_config.cpp
++++ b/src/gui_config.cpp
+@@ -11,6 +11,7 @@ gui_config::gui_config()
+     float_size = 1;
+     rack_ears  = true;
+     vu_meters  = true;
++    win_start_hidden = false;
+     style      = "Calf_Default";
+ }
+ 
+@@ -25,6 +26,7 @@ void gui_config::load(config_db_iface *db)
+     rack_ears  = db->get_bool("show-rack-ears", gui_config().rack_ears);
+     vu_meters  = db->get_bool("show-vu-meters", gui_config().vu_meters);
+     style      = db->get_string("style", gui_config().style);
++    win_start_hidden = db->get_bool("win-start-hidden", gui_config().win_start_hidden);
+ }
+ 
+ void gui_config::save(config_db_iface *db)
+@@ -34,6 +36,7 @@ void gui_config::save(config_db_iface *db)
+     db->set_bool("show-rack-ears", rack_ears);
+     db->set_bool("show-vu-meters", vu_meters);
+     db->set_string("style", style);
++    db->set_bool("win-start-hidden", win_start_hidden);
+     db->save();
+ }
+ 

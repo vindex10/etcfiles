@@ -1,0 +1,11 @@
+--- a/_mysql.c
++++ b/_mysql.c
+@@ -40,8 +40,6 @@
+ #include "structmember.h"
+ #if defined(MS_WINDOWS)
+ #include <config-win.h>
+-#else
+-#include "my_config.h"
+ #endif
+ #include "mysql.h"
+ #include "mysqld_error.h"

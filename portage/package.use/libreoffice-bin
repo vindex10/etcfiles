@@ -1,0 +1,4 @@
+# required by app-office/libreoffice-bin-6.1.5.2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/xmlsec-1.2.26 nss

@@ -1,0 +1,4 @@
+dev-vcs/git curl subversion
+# required by dev-vcs/git-2.4.10::gentoo[subversion,perl]
+# required by dev-vcs/git (argument)
+>=dev-vcs/subversion-1.8.14 -dso perl

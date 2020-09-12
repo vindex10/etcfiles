@@ -1,0 +1,4 @@
+# required by x11-misc/xscreensaver-5.40::gentoo
+# required by xscreensaver (argument)
+>=x11-libs/gdk-pixbuf-2.36.12 X
+ 

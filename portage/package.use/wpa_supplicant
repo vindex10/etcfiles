@@ -1,0 +1,20 @@
+# required by x11-libs/libxkbcommon-0.8.2::gentoo[X]
+# required by dev-qt/qtgui-5.11.3::gentoo[libinput]
+# required by dev-qt/qtsvg-5.11.3::gentoo
+# required by net-wireless/wpa_supplicant-2.6-r10::gentoo[qt5]
+# required by wpa_supplicant (argument)
+>=x11-libs/libxcb-1.13.1 xkb
+# required by dev-qt/qtgui-5.11.3::gentoo[xcb]
+# required by dev-qt/qtsvg-5.11.3::gentoo
+# required by net-wireless/wpa_supplicant-2.6-r10::gentoo[qt5]
+# required by wpa_supplicant (argument)
+>=x11-libs/libxkbcommon-0.8.2 X
+# required by dev-qt/qtcore-5.11.3-r2::gentoo
+# required by dev-qt/qtgui-5.11.3::gentoo
+# required by dev-qt/qtsvg-5.11.3::gentoo
+# required by net-wireless/wpa_supplicant-2.6-r10::gentoo[qt5]
+# required by wpa_supplicant (argument)
+>=dev-libs/libpcre2-10.30 pcre16
+
+
+net-wireless/wpa_supplicant ap wps gnutls -hs2-0 uncommon-eap-types p2p fasteap eap-sim qt5

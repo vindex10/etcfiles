@@ -1,0 +1,3 @@
+# always unstable
+net-news/canto-daemon ~amd64
+net-news/canto-curses ~amd64

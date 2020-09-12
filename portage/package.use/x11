@@ -1,0 +1,17 @@
+x11-proto/xextproto abi_x86_32
+x11-proto/kbproto abi_x86_32
+# move x11-proto/xcb-proto x11-base/xcb-proto
+x11-base/xcb-proto abi_x86_32
+x11-proto/xproto abi_x86_32
+dev-libs/libpthread-stubs abi_x86_32
+x11-libs/libXau abi_x86_32
+x11-libs/libXdmcp abi_x86_32
+x11-proto/inputproto abi_x86_32
+x11-proto/xf86bigfontproto abi_x86_32
+x11-libs/libXext abi_x86_32
+x11-libs/libX11 abi_x86_32
+x11-libs/libxcb abi_x86_32
+
+# required by dev-python/pandas-0.19.1::gentoo[-test,doc]
+# required by dev-python/rpy-2.6.2::gentoo
+>=x11-base/xorg-server-1.19.2 xvfb

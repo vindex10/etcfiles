@@ -1,0 +1,9 @@
+media-sound/mac mac
+app-dicts/myspell-ru myspell-ru_RU-AlexanderLebedev
+net-print/cndrvcups-lb Canon-UFR-II
+media-fonts/corefonts MSttfEULA
+app-arch/unrar unRAR
+sys-kernel/linux-firmware linux-fw-redistributable no-source-code
+net-misc/dropbox CC-BY-ND-3.0 dropbox
+net-print/cndrvcups-common-lb Canon-UFR-II
+

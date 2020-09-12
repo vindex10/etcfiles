@@ -1,0 +1,7 @@
+# all unstable
+
+x11-apps/igt-gpu-tools ~amd64
+# required by x11-apps/igt-gpu-tools-1.23::gentoo
+# required by igt-gpu-tools (argument)
+=dev-util/peg-0.1.18 ~amd64
+

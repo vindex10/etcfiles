@@ -1,0 +1,9 @@
+# required by dev-python/pyzmq-17.1.0::gentoo
+# required by dev-python/notebook-5.7.8::gentoo
+# required by dev-python/ipyparallel-6.0.2-r1::gentoo
+# required by dev-python/ipython-5.4.1-r2::gentoo[smp]
+# required by @selected
+# required by @world (argument)
+>=net-libs/zeromq-4.3.2 drafts
+
+#dev-python/* -python_targets_python3_6

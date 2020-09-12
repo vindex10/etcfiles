@@ -1,0 +1,6 @@
+# required by sys-auth/polkit-0.115-r2::gentoo[-systemd,-elogind]
+# required by sys-fs/udisks-2.8.1::gentoo
+# required by sys-fs/udiskie-1.1.1::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-auth/consolekit-1.2.1 policykit

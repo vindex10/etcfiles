@@ -1,0 +1,4 @@
+# always unstable
+sci-physics/root ~amd64
+
+<dev-cpp/tbb-2019 ~amd64

@@ -1,0 +1,6 @@
+# required by x11-libs/gtk+-3.24.1::gentoo
+# required by x11-libs/vte-0.48.4::gentoo
+# required by x11-terms/xfce4-terminal-0.8.7.4::gentoo
+# required by xfce4-terminal (argument)
+>=x11-libs/cairo-1.16.0-r2 X
+

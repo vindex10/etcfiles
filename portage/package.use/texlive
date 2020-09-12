@@ -1,0 +1,7 @@
+app-text/texlive context detex dvi2tty epspdf extra graphics luatex omega pdfannotextractor pstricks science tex4ht texi2html xetex humanities l10n_en l10n_ru l10n_uk l10n_fr l10n_de
+# required by dev-texlive/texlive-context-2017::gentoo
+# required by app-text/texlive-2017::gentoo[context]
+# required by @selected
+# required by @world (argument)
+>=app-text/texlive-core-2017-r4 xetex
+

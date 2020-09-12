@@ -1,0 +1,4 @@
+# required by net-vpn/libreswan-3.27::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/nss-3.40.1-r1 utils

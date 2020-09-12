@@ -1,0 +1,13 @@
+diff --git a/src/nlapi.c b/src/nlapi.c
+index acf94dc..a02bda8 100644
+--- a/src/nlapi.c
++++ b/src/nlapi.c
+@@ -71,7 +71,7 @@ int nlapi_work(int block) {
+     
+     for (;;) {
+         int bytes;
+-        char replybuf[1024];
++        char replybuf[64*1024];
+         struct nlmsghdr *p = (struct nlmsghdr *) replybuf;
+         
+         if ((bytes = recv(nlapi_fd, &replybuf, sizeof(replybuf), block ? 0 : MSG_DONTWAIT)) < 0) {

@@ -1,0 +1,5 @@
+net-wireless/blueman appindicator
+# required by net-wireless/blueman-2.1.1::gentoo[pulseaudio]
+# required by @selected
+# required by @world (argument)
+>=media-sound/pulseaudio-12.2-r2 bluetooth

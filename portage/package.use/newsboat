@@ -1,0 +1,3 @@
+# otherwise breaks compat with python3.7
+# dev-libs/stfl -python
+

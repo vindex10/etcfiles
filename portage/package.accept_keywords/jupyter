@@ -1,0 +1,8 @@
+# all unstable
+
+# required by dev-python/jupyter (argument)
+dev-python/jupyter ~amd64
+
+# required by dev-python/jupyter-1.0.0-r2::gentoo
+# required by dev-python/jupyter (argument)
+=dev-python/jupyter_console-6.0.0 ~amd64

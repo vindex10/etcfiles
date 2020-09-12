@@ -1,0 +1,13 @@
+diff --git a/src/qjackctlMainForm.cpp b/src/qjackctlMainForm.cpp
+index 1f868d6..b73bf7d 100644
+--- a/src/qjackctlMainForm.cpp
++++ b/src/qjackctlMainForm.cpp
+@@ -2231,7 +2231,7 @@ void qjackctlMainForm::updateXrunCount (void)
+ 			color = (m_pJackClient ? Qt::yellow : Qt::darkYellow);
+ 	#ifdef CONFIG_SYSTEM_TRAY
+ 		// Change the system tray icon background color!
+-		if (m_pSystemTray)
++		if (m_pSystemTray && m_pSetup && m_pSetup->bDisplayBlink)
+ 			m_pSystemTray->setBackground(color);
+ 	}   // Reset the system tray icon background!
+ 	else if (m_pSystemTray)

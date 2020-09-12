@@ -1,0 +1,8 @@
+# required by jack2 (argument)
+=media-sound/jack2-1.9.12-r1 ~amd64
+
+# required by media-plugins/deadbeef-plugins-meta-1::deadbeef-overlay[jack]
+# required by media-sound/deadbeef-1.8.0::deadbeef-overlay
+# required by @selected
+# required by @world (argument)
+=media-plugins/deadbeef-jack-20110321-r1 ~amd64

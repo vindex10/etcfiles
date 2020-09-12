@@ -1,0 +1,3 @@
+# required by www-client/chromium-81.0.4044.92::gentoo
+# required by chromium (argument)
+>=net-libs/nodejs-12.16.1 inspector
