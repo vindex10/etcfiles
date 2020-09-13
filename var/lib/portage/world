@@ -198,17 +198,13 @@ x11-misc/i3lock
 x11-misc/i3status
 x11-misc/kbdd
 x11-misc/redshift
-x11-misc/stalonetray
 x11-misc/wmname
 x11-misc/xclip
 x11-misc/xdotool
-x11-misc/xmobar
 x11-misc/xscreensaver
 x11-misc/xss-lock
 x11-terms/xfce4-terminal
 x11-themes/gtk-theme-switch
 x11-wm/i3
-x11-wm/xmonad
-x11-wm/xmonad-contrib
 xfce-extra/xfce4-notifyd
 xfce-extra/xfce4-screenshooter
