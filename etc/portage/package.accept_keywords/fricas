@@ -1,2 +1,27 @@
 # always unstable
 sci-mathematics/fricas ~amd64
+
+# dev-lisp/hunchentoot ~amd64
+# dev-lisp/bordeaux-threads ~amd64
+# dev-lisp/chunga ~amd64
+# dev-lisp/cl-base64 ~amd64
+# dev-lisp/cl-fad ~amd64
+# dev-lisp/cl-plus-ssl ~amd64
+# dev-lisp/cl-who ~amd64
+# dev-lisp/drakma ~amd64
+# dev-lisp/md5 ~amd64
+# dev-lisp/rfc2388 ~amd64
+# dev-lisp/trivial-backtrace ~amd64 # no package in remote. fails to download
+# dev-lisp/usocket ~amd64
+# dev-lisp/split-sequence ~amd64
+# dev-lisp/rt ~amd64
+# dev-lisp/fiveam ~amd64
+# dev-lisp/alexandria ~amd64
+# dev-lisp/asdf-flv ~amd64
+# dev-lisp/chipz ~amd64
+# dev-lisp/puri ~amd64
+# dev-lisp/ptester ~amd64
+# dev-lisp/cffi ~amd64
+# dev-lisp/babel ~amd64
+# dev-lisp/trivial-features ~amd64
+# dev-lisp/kmrcl ~amd64
