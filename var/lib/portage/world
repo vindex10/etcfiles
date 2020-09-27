@@ -15,6 +15,7 @@ app-misc/task
 app-misc/tmate
 app-misc/tmux
 app-misc/vifm
+app-misc/yq
 app-office/libreoffice-bin
 app-portage/cpuid2cpuflags
 app-portage/gentoolkit
@@ -37,7 +38,6 @@ dev-db/mariadb
 dev-db/mysql-connector-c
 dev-db/postgresql
 dev-haskell/cabal-install
-dev-haskell/hdevtools
 dev-haskell/hlint
 dev-haskell/pandoc-citeproc
 dev-lang/R
@@ -99,6 +99,7 @@ media-sound/jack2
 media-sound/pavucontrol
 media-sound/qjackctl
 media-sound/shntool
+media-video/recordmydesktop
 media-video/vlc
 net-analyzer/macchanger
 net-analyzer/netcat
