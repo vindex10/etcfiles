@@ -1,8 +1,3 @@
 # all unstable
 
 media-sound/deadbeef ~amd64
-# required by media-sound/deadbeef-0.7.2-r2::deadbeef-overlay
-# required by @selected
-# required by @world (argument)
-=media-plugins/deadbeef-plugins-meta-1 ~amd64
-
