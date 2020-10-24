@@ -1,11 +1,6 @@
 # calf, audacity, ffmpeg
 <=dev-python/mysql-python-1.2.5-r3 python_targets_python2_7
 
-# texlive pdfextractor
-<dev-java/javatoolkit-0.6.1 python_targets_python2_7
-<=dev-python/setuptools-46.4.0-r3 python_targets_python2_7
-<=dev-python/certifi-10001 python_targets_python2_7
-
 # due to python2.7 dependencies
 media-gfx/gimp -python
 dev-lang/yasm -python
