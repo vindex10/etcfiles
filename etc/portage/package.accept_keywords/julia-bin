@@ -1,2 +1,2 @@
-# required by julia-bin (argument)
-=dev-lang/julia-bin-1.2.0 ~amd64
+# always unstable
+dev-lang/julia-bin ~amd64
