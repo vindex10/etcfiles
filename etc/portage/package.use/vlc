@@ -2,5 +2,5 @@
 # required by vlc (argument)
 >=sys-libs/zlib-1.2.11-r2 minizip
 
-media-video/vlc libass matroska ogg
+media-video/vlc libass matroska ogg qt5
 
