@@ -1,0 +1,23 @@
+diff --git a/wpa_supplicant/wpa_gui-qt4/wpagui.cpp b/wpa_supplicant/wpa_gui-qt4/wpagui.cpp
+index a0aa05ed3..9e66b45d2 100644
+--- a/wpa_gui-qt4/wpagui.cpp
++++ b/wpa_gui-qt4/wpagui.cpp
+@@ -654,6 +654,8 @@ void WpaGui::updateNetworks()
+ 	networkSelect->clear();
+ 	networkList->clear();
+ 
++    networkSelect->addItem(tr("Select any network"));
++
+ 	if (ctrl_conn == NULL)
+ 		return;
+ 
+@@ -718,9 +720,6 @@ void WpaGui::updateNetworks()
+ 		start = end + 1;
+ 	}
+ 
+-	if (networkSelect->count() > 1)
+-		networkSelect->addItem(tr("Select any network"));
+-
+ 	if (!current && first_active >= 0)
+ 		networkSelect->setCurrentIndex(first_active);
+ 
