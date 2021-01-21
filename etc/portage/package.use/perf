@@ -1,1 +1,7 @@
 dev-util/perf unwind slang
+#
+# required by sys-libs/libunwind-1.5.0::gentoo[zlib]
+# required by dev-util/perf-5.9.9::gentoo[unwind]
+# required by @selected
+# required by @world (argument)
+>=sys-libs/zlib-1.2.11-r2 static-libs
