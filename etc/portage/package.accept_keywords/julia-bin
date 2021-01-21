@@ -1,2 +1,5 @@
 # always unstable
 dev-lang/julia-bin ~amd64
+
+# for plots. for now only unstable
+sci-visualization/gr ~amd64

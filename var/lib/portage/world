@@ -149,6 +149,7 @@ sci-mathematics/form
 sci-mathematics/fricas
 sci-physics/root
 sci-physics/root:6.18
+sci-visualization/gr
 sys-apps/ethtool
 sys-apps/hwinfo
 sys-apps/i2c-tools
