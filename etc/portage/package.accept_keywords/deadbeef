@@ -1,3 +1,4 @@
 # all unstable
 
 media-sound/deadbeef ~amd64
+=dev-libs/libdispatch-5.3.3 ~amd64
