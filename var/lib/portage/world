@@ -25,7 +25,6 @@ app-shells/gentoo-bashcomp
 app-text/enchant
 app-text/foliate
 app-text/hunspell
-app-text/pandoc
 app-text/pdftk
 app-text/qpdfview
 app-text/texlive
@@ -34,13 +33,11 @@ app-text/zathura-djvu
 app-text/zathura-pdf-poppler
 app-text/zathura-ps
 app-vim/rust-vim
+app-vim/vim-tmux
 dev-cpp/eigen
 dev-db/mariadb
 dev-db/mysql-connector-c
 dev-db/postgresql
-dev-haskell/cabal-install
-dev-haskell/hlint
-dev-haskell/pandoc-citeproc
 dev-lang/R
 dev-lang/f2c
 dev-lang/julia-bin
@@ -156,8 +153,6 @@ sci-libs/hdf5
 sci-mathematics/form
 sci-mathematics/fricas
 sci-physics/root
-sci-physics/root:6.18
-sci-visualization/gr
 sys-apps/ethtool
 sys-apps/hwinfo
 sys-apps/i2c-tools
