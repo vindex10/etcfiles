@@ -75,6 +75,8 @@ dev-vcs/git-lfs
 dev-vcs/mercurial
 games-mud/tintin
 games-roguelike/nethack
+gnome-extra/evolution-ews
+mail-client/evolution
 mail-client/thunderbird-bin
 media-fonts/corefonts
 media-fonts/dejavu
