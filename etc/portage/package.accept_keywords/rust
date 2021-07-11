@@ -2,3 +2,5 @@
 
 # by app-vim/rust-vim (argument)
 app-vim/rust-vim ~amd64
+
+dev-util/rustup ~amd64

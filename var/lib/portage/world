@@ -67,6 +67,7 @@ dev-tex/latexmk
 dev-util/ctags
 dev-util/meld
 dev-util/perf
+dev-util/rustup
 dev-util/smem
 dev-util/strace
 dev-util/vint
