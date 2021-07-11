@@ -1,1 +1,1 @@
-sci-physics/root -c++11 c++14 fits fftw roofit tmva -pythia6 -pythia8
+sci-physics/root -c++11 -c++17 c++14 fits fftw roofit tmva -pythia6 -pythia8
