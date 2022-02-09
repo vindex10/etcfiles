@@ -1,1 +1,1 @@
-media-sound/pulseaudio alsa equalizer webrtc-aec native-headset
+media-sound/pulseaudio alsa equalizer webrtc-aec native-headset -alsa-plugin

@@ -3,4 +3,4 @@
 sci-biology/bcftools ~amd64
 # required by sci-biology/bcftools-1.9::gentoo
 # required by bcftools (argument)
-=sci-libs/htslib-1.9 ~amd64
+=sci-libs/htslib-1.13 ~amd64
