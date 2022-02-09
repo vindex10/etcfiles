@@ -1,0 +1,19 @@
+diff --git a/data/webkit/webview.css b/data/webkit/webview.css
+index 3788d78423..d33e12510f 100644
+--- a/data/webkit/webview.css
++++ b/data/webkit/webview.css
+@@ -189,13 +189,9 @@ th.rtl {
+   margin-right: 5px;
+ }
+ 
+-.itip.content {
+-  float: left;
+-  max-width: 90%;
+-}
+-
+ .itip.description {
+   margin: 5px;
++  background: #fff;
+ }
+ 
+ .itip tr {
