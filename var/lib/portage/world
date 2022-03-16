@@ -46,7 +46,6 @@ dev-lang/R
 dev-lang/f2c
 dev-lang/julia-bin
 dev-lang/python
-dev-lang/python:3.6
 dev-lang/rust-bin
 dev-libs/libcgroup
 dev-libs/libsodium
@@ -131,6 +130,7 @@ media-sound/timidity++
 media-sound/timidity-freepats
 media-video/pipewire
 media-video/recordmydesktop
+media-video/shotcut
 media-video/vlc
 net-analyzer/macchanger
 net-analyzer/netcat
