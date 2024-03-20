@@ -1,0 +1,15 @@
+{
+  "user": {
+    "kernel_options": [
+      "loglevel=7",
+      "resume=UUID=c117c9f9-83e4-48cb-b425-451d605fb21b",
+      "systemd.show_status=true"
+    ],
+    "esp_path": "/boot/efi",
+    "setup_loader": true,
+    "manage_mode": false,
+    "force_update": false,
+    "live_mode": false,
+    "config_rev": 3
+  }
+}
